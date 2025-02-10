@@ -3,6 +3,70 @@
 	<head>
 		<meta charset="UTF-8">
 		<style type="text/css">
+			main, footer {
+				text-align: center;
+			}
+			header {
+				background-color: rgb(92, 125, 92);
+				text-align: center;
+				padding: 10px;
+				margin: 0 0;
+			}
+			main {
+				
+				max-width: 500px;
+				margin: 0 auto;
+			}
+
+			footer {
+				margin: 15px auto;
+				color: black;
+			}
+
+			body {
+				background-color: rgb(247, 244, 240);
+			}
+
+			.main {
+				background-color: rgb(54, 71, 54);
+				padding: 20px 100px;
+			}
+
+			h1 {
+				font-family: 'Arial';
+				letter-spacing: 0.1em;
+			}
+			h2 {
+				font-family: sans-serif;
+				letter-spacing: 0.54em;
+			}
+
+			button {
+				margin: 4px auto;
+				font-family: 'Arial', monospace;
+				font-size: 20px;
+				display: inline-block;
+				background-color: rgb(226, 222, 216);
+				border: none;
+				color: rgba(0, 0, 0, 0.915);
+				padding: 4px;
+				width: 75%;
+			}
+
+			button:hover {
+				background-color: rgb(111, 96, 62);
+				color: rgb(237, 232, 227);
+				
+			}
+
+			nav > a{
+				color: rgb(141, 121, 83);
+			}
+
+			a:hover {
+				color: rgb(32, 37, 32);
+			}
+
 			
 		</style>
 		<title>Precious's Personal Website</title>
@@ -13,10 +77,28 @@
 			<h1>Precious Adigwe || ITIS 3135</h1>
 		</header>
 		<main>
-			<h2>Home Page</h2>
+			<h2>HOME PAGE</h2>
+			<div class="main">
+				<a href="https://github.com/pradigwe/" target="_blank">
+					<button>Github</button>
+				</a><br>
+				<a href="https://www.linkedin.com/in/pradigwe/" target="_blank">
+					<button>LinkedIn</button>
+				</a><br>
+				<a href="https://www.codecademy.com/profiles/padigwe" target="_blank">
+					<button>CodeAcademy</button>
+				</a><br>
+				<a href="https://www.freecodecamp.org/padigwe" target="_blank">
+					<button>freeCodeCamp</button>
+				</a>
+			</div>				
 		</main>
 		<footer>
-			<nav><a href="itis3135\index.html">My ITIS 3135 page.</nav>
+			<nav>
+				<a target="_blank" href="itis3135\index.html">My ITIS 3135 page.</a> ||
+				<a target="_blank" href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fwebpages.charlotte.edu%2Fpadigwe%2F">HTML Validation</a> ||
+				<a target="_blank" href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fwebpages.charlotte.edu%2Fpadigwe%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en">CSS Validation</a>
+			</nav>
 		</footer>
 	</body>
 </html>
