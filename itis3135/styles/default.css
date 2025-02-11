@@ -1,0 +1,27 @@
+header, main, footer {
+    text-align: center;
+}
+
+body {
+    background-color: rgb(141, 174, 141);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    width: 100%;
+    margin: 0 auto;
+    border-bottom: 5px solid rgb(114, 108, 38);
+    
+}
+
+#navigation {
+    background-color: rgb(78, 121, 78);
+    padding: 20px;
+    word-spacing: 40px;
+}
+
+#navigation > a {
+    color: white;
+    text-decoration: none;
+}
