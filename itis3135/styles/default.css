@@ -1,22 +1,36 @@
+/*
+Colors used:
+Main background: #fefae0
+Sub background: #283618
+Elements: #bc6c25
+*/
+
 header, main, footer {
     text-align: center;
+    font-family: Garamond, 'Times New Roman', Times, serif;
+    font-size: 16px;
+}
+
+body, html {
+    margin: 0;
+    height: 100%;
 }
 
 body {
-    background-color: rgb(141, 174, 141);
-    margin: 0;
-    padding: 0;
+    background-color: #fefae0;
+    display: grid;
+    grid-template-rows: minmax(60px, auto) minmax(0, 100%);
+    /*first minmax() is how long the first row(a.k.a header) is*/
+    /*minmax(minimum, maximum)*/
 }
 
 header {
     width: 100%;
     margin: 0 auto;
-    border-bottom: 5px solid rgb(114, 108, 38);
-    
 }
 
 #navigation {
-    background-color: rgb(78, 121, 78);
+    background-color: #606c38;
     padding: 20px;
     word-spacing: 40px;
 }
@@ -24,4 +38,30 @@ header {
 #navigation > a {
     color: white;
     text-decoration: none;
+}
+
+main {
+    color: black;
+    overflow: auto;
+}
+
+footer {
+    background-color:  #606c38;
+    padding: 20px 0 0;
+    word-spacing: 10px;
+}
+
+#relevant-links, #relevant-links > a{
+    color:white;
+}
+
+#copyright {
+    color: white;
+    word-spacing: normal;
+}
+
+#contract {
+    width: 70%;
+    max-width: 690px;
+    margin: 0 auto;
 }
