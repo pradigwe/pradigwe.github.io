@@ -8,7 +8,7 @@ Elements: #bc6c25
 header, main, footer {
     text-align: center;
     font-family: Garamond, 'Times New Roman', Times, serif;
-    font-size: 16px;
+    font-size: 15px;
 }
 
 body, html {
@@ -18,6 +18,9 @@ body, html {
 
 body {
     background-color: #fefae0;
+}
+
+body:not(.long) {
     display: grid;
     grid-template-rows: minmax(60px, auto) minmax(0, 100%);
     /*first minmax() is how long the first row(a.k.a header) is*/
@@ -45,10 +48,29 @@ main {
     overflow: auto;
 }
 
+.strong {
+    font-weight: bold;
+}
+
+.italic {
+    letter-spacing: 0.035rem;
+    font-style: italic;
+}
+
+ul {
+    text-align: center;
+    list-style: inside;
+}
+
+.indent {
+    list-style: inside circle;
+}
+
 footer {
     background-color:  #606c38;
     padding: 20px 0 0;
-    word-spacing: 10px;
+    word-spacing: 5px;
+    font-size: 12px;
 }
 
 #relevant-links, #relevant-links > a{
