@@ -18,24 +18,29 @@ body, html {
 
 body {
     background-color: #fefae0;
-}
-
-body:not(.long) {
-    display: grid;
-    grid-template-rows: minmax(60px, auto) minmax(0, 100%);
-    /*first minmax() is how long the first row(a.k.a header) is*/
-    /*minmax(minimum, maximum)*/
+    margin: 0;
 }
 
 header {
+    position: fixed;
+    top: 0;
     width: 100%;
     margin: 0 auto;
+}
+
+header > h1 {
+    background-color: #fefae0;
+    padding: 20px;
+    margin: 0;
 }
 
 #navigation {
     background-color: #606c38;
     padding: 20px;
-    word-spacing: 40px;
+}
+
+#navigation > a + a {
+    margin-left: 30px;
 }
 
 #navigation > a {
@@ -43,9 +48,10 @@ header {
     text-decoration: none;
 }
 
+
 main {
+    margin-top: 150px;
     color: black;
-    overflow: auto;
 }
 
 .strong {
@@ -67,10 +73,19 @@ ul {
 }
 
 footer {
+
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
     background-color:  #606c38;
+    margin: 0;
     padding: 20px 0 0;
     word-spacing: 5px;
     font-size: 12px;
+    
 }
 
 #relevant-links, #relevant-links > a{
