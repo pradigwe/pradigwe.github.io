@@ -101,6 +101,15 @@ footer {
     color: #333333;
 }
 
+footer a {
+    color: #333333;
+
+}
+
+footer a:hover {
+    color: #A41623;
+}
+
 @media (max-width:599px) {
     header {
         position: relative;
