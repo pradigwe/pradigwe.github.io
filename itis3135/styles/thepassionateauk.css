@@ -8,7 +8,7 @@ Colors Used:
     Font: #FCAF80
 */
 
-* {
+html {
     box-sizing: border-box;
 }
 
@@ -41,7 +41,7 @@ header img {
     margin: 20px 20px;;
 }
 
-header h1 {
+h1 {
     margin: 0;
     font-size: 3.5em;
 }
@@ -60,7 +60,7 @@ main {
     overflow: hidden;
 }
 
-main >  h2 {
+h2 {
     margin: 0 20px 10px 20px;
     padding-top: 10px;
     font-size: 2rem;
@@ -104,15 +104,18 @@ footer {
 @media (max-width:599px) {
     header {
         position: relative;
-        height: 600px;
+        height: 670px;
         display: block;
         text-align: center;
-        padding-top: 150px;
+        align-content: center;
     }
 
     header img {
         width: 200px;
-        padding: auto;
+    }
+
+    .name {
+        font-size: 2.95rem;
     }
     
     .navigation {
@@ -128,12 +131,6 @@ footer {
 
     main {
         margin: 0;
-    }
-
-    main h2 {
-        font-size: 3rem;
-        margin-top: 20px;
-        margin-bottom: 20px;
     }
 
     main p{

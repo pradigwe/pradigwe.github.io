@@ -10,7 +10,7 @@ header, main, footer {
     font-family: Garamond, 'Times New Roman', Times, serif;
     font-size: 15px;
 }
-
+ 
 body, html {
     margin: 0;
     height: 100%;
@@ -28,7 +28,7 @@ header {
     margin: 0 auto;
 }
 
-header > h1 {
+h1 {
     background-color: #fefae0;
     padding: 20px;
     margin: 0;
@@ -54,6 +54,10 @@ main {
     color: black;
 }
 
+figcaption {
+    padding-top: 10px;
+}
+
 .strong {
     font-weight: bold;
 }
@@ -72,30 +76,34 @@ ul {
     list-style: inside circle;
 }
 
-footer {
-
-}
 
 footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+    height: 120px;
     background-color:  #606c38;
+    color: white;
     margin: 0;
-    padding: 20px 0 0;
     word-spacing: 5px;
     font-size: 12px;
-    
+    align-content: center;
 }
 
-#relevant-links, #relevant-links > a{
-    color:white;
+.relevant-links, #copyright > a{
+    color: white;
+
+}
+
+.divider {
+    display: inline;
 }
 
 #copyright {
     color: white;
     word-spacing: normal;
 }
+
 
 #contract {
     width: 70%;
