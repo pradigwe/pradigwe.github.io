@@ -8,8 +8,12 @@ Colors Used:
     Font: #FCAF80
 */
 
+@import 'nav.css';
+
 html {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 .italic {
@@ -31,9 +35,9 @@ header {
     justify-content: space-around;
     width: 100%;
     height: 120px;
-    margin: 0 auto;    
+    margin: 0;    
     background-color: #FFB563;
-    color: #918450;
+    color: #525032;
 }
 
 header img {
