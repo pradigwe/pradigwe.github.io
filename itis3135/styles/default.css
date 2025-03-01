@@ -118,10 +118,6 @@ ul {
 
 /* INTRODUCTION PAGE SPECIFIC STYLE */
 
-.comparison * {
-    /* border: 0.5px solid red; */
-}
-
 .comparison {
     display: grid;
     grid-template-columns: 40% 40%;   
