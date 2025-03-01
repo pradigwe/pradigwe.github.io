@@ -1,23 +1,30 @@
-/*
-Colors used:
-Main background: #fefae0
-Sub background: #283618
-Elements: #bc6c25
-*/
+:root {
+    --background-color: #fefae0;
+    --navigation-color: #606c38;
+    --navigation-text-color: white;
+}
 
+/* TEXT STYLES */
+.strong {
+    font-weight: bold;
+}
+
+.italic {
+    letter-spacing: 0.035rem;
+    font-style: italic;
+}
+
+/* DEFAULT STYLES */
 header, main, footer {
     text-align: center;
     font-family: Garamond, 'Times New Roman', Times, serif;
     font-size: 15px;
 }
- 
-body, html {
-    margin: 0;
-    height: 100%;
-}
 
-body {
-    background-color: #fefae0;
+/* HEADER */
+h1 {
+    background-color: var(--background-color);
+    padding: 20px;
     margin: 0;
 }
 
@@ -28,14 +35,9 @@ header {
     margin: 0 auto;
 }
 
-h1 {
-    background-color: #fefae0;
-    padding: 20px;
-    margin: 0;
-}
-
+/* NAVIGATION */
 #navigation {
-    background-color: #606c38;
+    background-color: var(--navigation-color);
     padding: 20px;
 }
 
@@ -44,27 +46,65 @@ h1 {
 }
 
 #navigation > a {
-    color: white;
+    color: var(--navigation-text-color);
     text-decoration: none;
 }
+/* FOOTER */
 
+footer {
+    min-height: 150px;
+    bottom: 0;
+    width: 100%;
+    height: 120px;
+    background-color: var(--navigation-color);
+    color: var(--navigation-text-color);
+    margin: 0;
+    word-spacing: 5px;
+    font-size: 12px;
+    align-content: center;
+}
+
+.divider {
+    display: inline;
+}
+
+#copyright {
+    color: var(--navigation-text-color);
+    word-spacing: normal;
+}
+
+.relevant-links, #copyright > a{
+    color: var(--navigation-text-color);
+}
+
+/* BODY */
+
+body {
+    min-height: 100vh;
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
 
 main {
+    flex: 1;
     margin-top: 150px;
     color: black;
 }
 
+
+/* CONTRACT PAGE SPECIFIC STYLE */
+#contract {
+    width: 70%;
+    max-width: 690px;
+    margin: 0 auto;
+}
+
+/* INTRODUCTION PAGE SPECIFIC STYLE */
+
 figcaption {
     padding-top: 10px;
-}
-
-.strong {
-    font-weight: bold;
-}
-
-.italic {
-    letter-spacing: 0.035rem;
-    font-style: italic;
 }
 
 ul {
@@ -76,37 +116,53 @@ ul {
     list-style: inside circle;
 }
 
+/* INTRODUCTION PAGE SPECIFIC STYLE */
 
-footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    height: 120px;
-    background-color:  #606c38;
-    color: white;
+.comparison * {
+    /* border: 0.5px solid red; */
+}
+
+.comparison {
+    display: grid;
+    grid-template-columns: 40% 40%;   
+    justify-content: space-evenly;
+    margin: 0 0 70px 0;
+    padding: 0;      
+}
+
+.comparison a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.5rem;
+    
+} 
+
+.column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0; 
     margin: 0;
-    word-spacing: 5px;
-    font-size: 12px;
-    align-content: center;
+    align-items: center;
 }
 
-.relevant-links, #copyright > a{
-    color: white;
-
+.column img {
+    width: 456px;
+    padding-bottom: 20px;
 }
 
-.divider {
-    display: inline;
+.column p, .column ul, .column li, .column a {
+    align-items: center;
+    justify-content: center;
+    width: 75%;
 }
 
-#copyright {
-    color: white;
-    word-spacing: normal;
+.column ul {
+    padding: 0;
 }
 
-
-#contract {
-    width: 70%;
-    max-width: 690px;
-    margin: 0 auto;
+.column li {
+    width: 100%;
+    padding-bottom: 10px;
 }
+
