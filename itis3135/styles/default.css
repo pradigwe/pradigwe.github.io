@@ -1,10 +1,13 @@
 :root {
     --background-color: #fefae0;
-    --navigation-color: #606c38;
-    --navigation-text-color: white;
+    --navigation-color: #283618;
+    --navigation-text-color: #E9B87F;
+    --text-color: #3F2E1F;
 }
 
+
 /* TEXT STYLES */
+
 .strong {
     font-weight: bold;
 }
@@ -17,15 +20,17 @@
 /* DEFAULT STYLES */
 header, main, footer {
     text-align: center;
-    font-family: Garamond, 'Times New Roman', Times, serif;
+    font-family: "Patrick Hand", cursive;
     font-size: 15px;
 }
 
 /* HEADER */
 h1 {
+    font-family: "Rock Salt";
     background-color: var(--background-color);
-    padding: 20px;
+    padding: 12px;
     margin: 0;
+    color: #BC6C25;
 }
 
 header {
@@ -60,7 +65,7 @@ footer {
     color: var(--navigation-text-color);
     margin: 0;
     word-spacing: 5px;
-    font-size: 12px;
+    font-size: 14px;
     align-content: center;
 }
 
@@ -90,7 +95,7 @@ body {
 main {
     flex: 1;
     margin-top: 150px;
-    color: black;
+    color: var(--text-color);
 }
 
 
@@ -116,7 +121,7 @@ ul {
     list-style: inside circle;
 }
 
-/* INTRODUCTION PAGE SPECIFIC STYLE */
+/* WEB EVALUATION PAGE SPECIFIC STYLE */
 
 .comparison {
     display: grid;
@@ -128,8 +133,8 @@ ul {
 
 .comparison a {
     text-decoration: none;
-    color: black;
-    font-size: 1.5rem;
+    color: var(--text-color);
+    font-size: 30px;
     
 } 
 
@@ -140,6 +145,7 @@ ul {
     padding: 0; 
     margin: 0;
     align-items: center;
+    font-size: 17px;
 }
 
 .column img {
@@ -162,3 +168,6 @@ ul {
     padding-bottom: 10px;
 }
 
+.conclusion {
+    font-size: 20px;
+}
