@@ -7,8 +7,10 @@ icon.addEventListener('click', () => {
         
         if (display === 'none') {
             e.style.display  = 'block';
-        } if (display === 'block') {
+        } else {
             e.style.display  = 'none';
         }
+
+        
     });
 });

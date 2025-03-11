@@ -36,6 +36,7 @@ h1 {
 #navigation {
     background-color: var(--navigation-color);
     padding: 20px;
+    justify-content: center;
 }
 
 #navigation > a + a {
@@ -171,6 +172,11 @@ ul {
 /* RULE OVERRIDES */
 /* Rule Overrides For Laptops / Small Screens */
 @media screen and ( min-width: 981px ) and ( max-width: 1900px ) {
+    /* Navigation */
+    #navigation {
+        display: flex;
+    }
+    
     /* Website Evaluation */
     .column img {
         padding-bottom: 20px;
@@ -179,6 +185,15 @@ ul {
 
 /* Rule Overrides For Tablet Devices */
 @media screen and ( min-width: 601px ) and ( max-width: 980px ) {
+    /* Navigation */
+    #navigation {
+        display: flex;
+
+        a {
+            display:block;
+        }
+    }
+    
     /* Website Evaluation */
     .column img {
         padding-bottom: 30px;
