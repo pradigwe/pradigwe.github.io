@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Houseplants</title>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&family=Kirang+Haerang&family=Londrina+Solid:wght@400;900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../styles/nav.css">
+    <style>
+        :root {
+            --background: #E5DDCE;
+            --main-color1: #CABA9C;
+            --main-color2: #4C6444;
+            --sub-color1: #4D2D18;
+            --sub-color2: #8A6240;
+            --text-color: #102820;
+            --accent-color: #F9F7F3;
+            --cabin-font: 'Cabin Sketch', Georgia, sans-serif;
+        }
+        html {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        /* General Styling */
+        body {
+            background-color: var(--background);
+            min-height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            overflow-x: hidden;
+        }
+        header, main, footer {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            font-family: 'Source Code Pro';
+            font-size: 16px;
+        }
+        main {
+            margin: 20px 20px 0 20px;
+            max-width: calc(100vw - 40px);
+        }
+        figure {
+            margin: 0;
+        }
+        
+
+        /* Header */
+        header {
+            display: flex;
+            width: 100vw;
+        }   
+        header img {
+            width: 100%;
+        }
+        header figure {
+            width: calc(100% - 50px);
+            position: absolute;
+            z-index: 4;
+            color: var(--accent-color);
+            align-self: flex-end;
+            justify-self: end;
+            text-align: end;
+            margin-right: 50px;
+            margin-bottom: 5px; 
+        }  
+        header figure a {
+            color: var(--accent-color);
+        } 
+
+        h1 {
+            font-family: 'Londrina Solid';
+            font-weight: 900;
+            font-size: 150px;
+            color: var(--main-color2);
+            stroke: var(--accent-color);
+            -webkit-text-stroke-color: var(--accent-color);
+            -webkit-text-stroke-width: 4px;
+            margin: 0 0 0 30px;
+            align-self: flex-end;
+            z-index: 2;
+            position: absolute;
+        }
+
+        /* Navigation */
+        nav {
+            font-size: 24px;
+            font-family: 'Kirang Haerang';
+            display: flex;
+            
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            left: 20px;
+            position: absolute;
+            justify-content: end;
+        }
+        nav ul {
+            gap: 24px;
+            margin: 0;
+            display: flex;
+            width: 100vw;
+            justify-content: end;
+        }
+        nav #home-btn {
+            background-color: var(--main-color2);
+            margin-right: auto;
+        }
+        nav #home-btn a {
+            color: var(--accent-color);
+        }
+        
+        nav li {
+            list-style: none;
+            display: inline-block;
+            background-color: var(--accent-color);
+            text-align: center;
+            border-radius: 30px;
+            width: 100px;
+            justify-content: center;
+            align-items: center;
+        }
+        nav li:last-child {
+            width: 150px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--main-color2);
+            width: 150px;
+        }
+
+        /* PAGES */
+        main > section {
+            margin-top: 60px;
+            display: flex;
+        }
+        /* What */
+        #what {
+            margin-top: 0;
+            flex-direction: column;
+            padding-right: 20px;
+        }
+        #what #header-caption {
+            text-align: end;
+            margin-bottom: 20px;
+        }
+        #what #header-caption a {
+            color: var(--text-color)
+        }
+        #what .heading {
+            margin: 0 0 20px 0;
+            text-align: center;
+            font-weight: 900;
+            font-size: 64px;
+        }
+        #what h2 {
+            font-family: var(--cabin-font);
+            font-size: 48px;
+            font-weight: 400;
+        }
+        .plants {
+            display: flex;
+            padding-bottom: 50px;
+            width: 100%;
+        }
+        .cards {
+            display: flex;
+            flex-direction: row;
+            flex-grow: 3;
+            gap: 35px;
+            width: 70vw;
+            margin: 0;
+            justify-content: center;
+        }
+        .card {
+            background-color: var(--accent-color);
+            width: 25%;
+            font-size: 14px;
+            text-align: center;
+            border-radius: 20px;
+            padding: 15px;
+            margin: 0;
+        }
+        .card img {
+            padding-top: 10px;
+            width: 95%;
+            
+        }
+        .card figcaption {
+            font-size: 11px;
+        }
+
+        .card h4 {
+            text-align: start;
+            text-indent: 10px;
+            margin-bottom: 5px;
+        }
+        .card p {
+            text-align: start;
+            text-indent: 0;
+        }
+        .border {
+            border: 1px solid black;
+            width: 100%
+        }
+        .text {
+            margin: 0;
+            width: 30vw;
+        }
+        .text p {
+            text-indent: 20px;
+        }
+        .right.text{
+            text-align: end;
+        }
+        .right.text p {
+            text-align: start;
+        }
+        
+        /* Who */
+        #who {
+            height: 80vh;
+            flex-wrap: wrap;
+            align-content: center;
+            justify-content: center;
+        }
+        #who div {
+            display: flex;
+            background-color: var(--sub-color1);
+            width: 80%;
+            color: var(--main-color1);
+            padding: 40px;
+            border-radius: 50px;
+        }
+        #who div .about-me-head{
+            font-family: var(--cabin-font);
+            font-size: 48px;
+            margin: 0;
+        }
+        #who div p, #who div figcaption, #who div img{
+            color: var(--accent-color); 
+            font-weight: 300; 
+        }
+        #who div p {
+            font-size: 16px;
+            text-indent: 30px;
+        }
+
+        #who div .right {
+            width: 100%;
+            flex-direction: column;
+        }
+        #who div .left {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+            flex-wrap: wrap;
+            text-align: end;
+        }
+        #who div img {
+            width: 90%;
+        }
+
+        /* When */
+        #when {
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: center;
+            height: 90vh;
+            color: var(--text-color);
+        }
+        #when > :nth-child(1), #when > :nth-child(2) {
+            text-align: center;
+            font-family: var(--cabin-font);
+            
+            margin: 0;
+            
+        }
+        #when > :nth-child(1) {
+            font-size: 60px;
+        }
+        #when > :nth-child(2) {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        #when .cards {
+            height: 40%;
+            width: 90vw;
+            color: var(--accent-color);
+        }
+        #when .cards .card {
+            background-color: var(--main-color2);
+            width: 30%;
+            border-radius: 0;
+            height: 67vh;
+        }
+        #when .cards .card img {
+            border: 3px solid var(--sub-color1);
+            width: 60%;
+            padding: 0;
+        }
+        #when .cards .card figcaption {
+            font-size: 14px;
+            
+        }
+        #when .cards .card figcaption a {
+            color: #D0FFB6;
+        }
+        #when .cards .card .border {
+            border: 1px solid var(--accent-color);
+            
+        }
+
+        /* Where */
+        #where {
+            width: 100%;
+            justify-content: center;
+            align-content: center;
+            flex-wrap: wrap;
+            flex-direction: row;
+            padding: 0 20px;
+            gap: 20px;
+        }
+        #where .container {
+            width: 40%;
+            align-content: center;
+        }
+        #where .container figure {
+            margin: 0;
+            text-align: center;
+        }
+        #where .container figure img {
+            border-radius: 40px;
+            height: 30vh;
+        }
+        #where .container h2 {
+            font-family: var(--cabin-font);
+            font-size: 48px;
+            color: var(--sub-color2);
+            margin-bottom: 0;
+        }
+        #where .container p {
+            font-size: 14px;
+            color: var(--main-color2);
+            text-indent: 10px;
+        }
+        #where .container div.right {
+            text-align: end;
+        }
+
+        /* How */
+        #how {
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-content: center;
+            justify-content: center;
+            font-size: 14px;
+            height: 80vh;
+        }
+        #how h2 {
+            color: var(--sub-color1);
+            margin: auto auto 0 10px;
+            font-size: 48px;          
+            font-family: var(--cabin-font);  
+        }
+        #how div {
+            width: 80%;
+            display: flex;
+            gap: 50px;
+        }
+        #how .left {
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        #how .left > div {
+            color: var(--accent-color); 
+            background-color: var(--sub-color1);
+            width: calc(100% - 40px);
+            border-radius: 30px;
+            flex-direction: column;
+            gap: 0px;
+            padding: 20px;
+        }
+        
+        #how .left h3{
+            font-family: var(--cabin-font);
+            font-size: 24px;
+            margin: 0;
+        }
+        #how .right {
+            width: 40%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: center;
+            
+        }
+        .right img {
+            width: 90%;
+        }
+        
+        /* Why */
+        #why {
+            justify-content: center;
+            gap: 50px;
+        }
+        #why .left {
+            justify-content: center;
+            align-content: center;
+        }
+        #why .right {
+            width: 40%;
+            align-content: center;
+            text-align: center;
+        }
+        #why .right h2 {
+            font-family: var(--cabin-font);
+            font-size: 48px;
+            color: var(--accent-color);
+            background-color: var(--text-color);
+            border-radius: 200px;
+            padding: 10px;
+        }
+        #why img {
+            width: 90%;
+        }
+        #why figcaption {
+            font-size: 14px;
+        }
+
+        /* Prompts */
+        #prompts {
+            flex-direction: column;
+            height: 83vh;
+            justify-content: center;
+        }
+        #prompts h2 {
+            font-family: var(--cabin-font);
+            font-size: 48px;
+        }
+
+        /* Footer */
+        footer {
+            color: var(--text-color);
+            text-align: center;
+            align-content: center;
+        }
+        footer a {
+            color: var(--sub-color1);
+        }
+        footer a:hover {
+            color: rgb(39, 87, 39);
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <img class="home" src="images/houseplants.jpg" alt="">
+        <h1 class="home" id="title">HOUSEPLANTS</h1>
+        <nav id="navigation">
+            <ul>
+                <li id="home-btn"><a href="#what">HOME</a></li>
+                <li><a href="#who">Who</a></li>
+                <li><a href="#when">When</a></li>
+                <li><a href="#where">Where</a></li>
+                <li><a href="#how">How</a></li>
+                <li><a href="#why">Why</a></li>
+                <li><a href="#prompts">Prompts</a></li>
+            </ul>
+        </nav>
+        <figure>
+            <figcaption id="header-caption">Photo of Plants on the Table - Photo taken by <a href="https://www.pexels.com/photo/photo-of-plants-on-the-table-1005058/">Designecologist</a></figcaption>
+        </figure>
+    </header>
+    <main>
+        <div data-include="../../components/nav.html"></div>    
+        <section id="what">
+            <h2 class="heading">What to Grow</h2>
+            <div class="beginner plants">
+                <div class="left text">
+                    <h2>Beginner</h2>
+                    <p>
+                        As a beginner, it's important to start with plants that are low-maintenance and forgiving. 
+                        These plants will help you get familiar with the basics of plant care, such as light, water,
+                         and general attention, without the worry of needing constant care. Snake plants, Pothos, 
+                         and ZZ plants are excellent choices for first-time plant owners. Their resilience and 
+                         ability to thrive in various indoor conditions make them perfect for anyone just starting
+                         to explore the world of indoor gardening.
+                    </p>
+                </div>
+                <div class="right cards">
+                    <div class="card">
+                        <figure>
+                            <img src="images/snake.jpg" alt="snake plant">
+                            <figcaption>Dracaena trifasciata - Drawn by <a href="#who">me</a></figcaption>
+                        </figure>
+                        <h4>Snake Plant</h4>
+                        <div class="border"></div>
+                        <p>
+                            A hardy plant that tolerates low light and infrequent watering. Snake plants are 
+                            virtually indestructible and can thrive in a variety of indoor environments.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <figure>
+                            <img src="images/pothos.jpg" alt="pothos plant">
+                            <figcaption>Epipremnum aureum - Drawn by <a href="#who">me</a></figcaption>
+                        </figure>
+                        <h4>Pothos</h4>
+                        <div class="border"></div>
+                        <p>
+                            Known for its trailing vines, the pothos is an easy-going plant that can grow in low 
+                            light and needs only occasional watering. It's perfect for beginners because it doesn't 
+                            require constant attention.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <figure>
+                            <img src="images/zz.jpg" alt="zz plant">
+                            <figcaption>Zamioculcas - Drawn by <a href="#who">me</a></figcaption>
+                        </figure>
+                        <h4>ZZ Plant</h4>
+                        <div class="border"></div>
+                        <p>
+                            This plant thrives with very little care and attention. The ZZ plant can tolerate low 
+                            light and infrequent watering, making it an ideal choice for new plant parents.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="intermediate plants">
+                <div class="left cards">
+                    <div class="card">
+                        <figure>
+                            <img src="images/spider.jpg" alt="spider plant">
+                            <figcaption>Chlorophytum comosum - Drawn by <a href="#who">me</a></figcaption>
+                        </figure>
+                        <h4>Spider Plant</h4>
+                        <div class="border"></div>
+                        <p>
+                            A resilient plant that needs bright, indirect light and moderate watering. 
+                            It will reward you with small "pups" or baby plants that are easy to propagate.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <figure>
+                            <img src="images/aloe-vera.jpg" alt="pothos plant">
+                            <figcaption>Aloe barbadensis miller - Drawn by <a href="#who">me</a></figcaption>
+                        </figure>
+                        <h4>Aloe Vera</h4>
+                        <div class="border"></div>
+                        <p>
+                            This succulent thrives in bright light and requires little water, but it's more 
+                            sensitive to overwatering. It's a great choice for those who understand the importance 
+                            of a balanced watering schedule.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <figure>
+                            <img src="images/peace-lily.jpg" alt="peace lily">
+                            <figcaption>Spathiphyllum wallisii - Drawn by <a href="#who">me</a></figcaption>
+                        </figure>
+                        <h4>Peace Lily</h4>
+                        <div class="border"></div>
+                        <p>
+                            Peace Lilies need medium light and regular watering, and they’ll also benefit from higher 
+                            humidity levels. They are forgiving but do require more attention than beginner plants.
+                        </p>
+                    </div>
+                </div>
+                <div class="right text">
+                    <h2>Intermediate</h2>
+                    <p>
+                        Now that you've gained some confidence in caring for plants, it's time to challenge 
+                        yourself with a few plants that require more attention to detail. These intermediate-
+                        level plants, such as the Spider Plant, Aloe Vera, and Peace Lily, are a great next 
+                        step. They will teach you how to adjust your care routines to meet their needs—whether 
+                        it's providing proper watering schedules, ensuring sufficient humidity, or fine-tuning 
+                        light exposure. These plants will reward you with healthy growth and beautiful blooms 
+                        with a little extra care.
+                    </p>
+                </div>
+            </div>
+            <div class="advanced plants">
+                <div class="left text">
+                    <h2>Advanced</h2>
+                    <p>
+                        For experienced plant owners who are ready to take on more demanding plants, 
+                        there are options that require careful attention to detail. These plants 
+                        demand a keen eye for light, humidity, watering, and temperature control. 
+                        While they can be challenging, they offer the satisfaction of nurturing unique 
+                        and beautiful indoor plants that thrive with the right conditions.
+                    </p>
+                </div>
+                <div class="right cards">
+                    <div class="card">
+                        <figure>
+                            <img src="images/fiddle.jpg" alt="fiddle leaf fig">
+                            <figcaption>Ficus lyrata - Drawn by <a href="#who">me</a></figcaption>
+                        </figure>
+                        <h4>Fiddle Leaf Fig</h4>
+                        <div class="border"></div>
+                        <p>
+                            A striking indoor tree with large, glossy leaves. This plant requires bright, indirect 
+                            light and needs to be kept in a consistent environment with regular humidity. It thrives 
+                            when given careful attention to watering and temperature.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <figure>
+                            <img src="images/orchid.jpg" alt="orchid plant">
+                            <figcaption>Orchidaceae - Drawn by <a href="#who">me</a></figcaption>
+                        </figure>
+                        <h4>Orchid</h4>
+                        <div class="border"></div>
+                        <p>
+                            Orchids are incredibly beautiful but need precise care. They require high humidity, regular 
+                            watering (without overwatering), and a specific light environment. With proper attention, 
+                            they can bloom for months and offer stunning flowers.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <figure>
+                            <img src="images/citrus.jpg" alt="citrus tree">
+                            <figcaption>Citrus - Drawn by <a href="#who">me</a></figcaption>
+                        </figure>
+                        <h4>Citrus Tree</h4>
+                        <div class="border"></div>
+                        <p>
+                            A rewarding challenge, citrus trees need a lot of light and consistent warmth to thrive. 
+                            These trees can bear fruit with proper care, though they require a detailed watering and 
+                            feeding routine to ensure they stay healthy and productive.
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="who">
+            <div>
+                <div class="right">
+                    <h2 class="about-me-head">About Me</h2>
+                    <p>
+                        Welcome to Houseplants! I'm a passionate plant enthusiast dedicated to helping you 
+                        bring the beauty of nature into your home. My journey began with two resilient plants
+                        —Pothos and Snake Plant—which taught me how simple and rewarding indoor gardening can 
+                        be, even for beginners. These plants, known for their low-maintenance care and 
+                        air-purifying qualities, were the perfect introduction to indoor plants.
+                    </p>
+                    <p>
+                        I created Houseplants to share my experiences and guide you in finding the best plants 
+                        for your home and skill level. Whether you're just starting out or already a seasoned 
+                        plant parent, there's always something new to learn in the world of indoor plants.
+                    </p>
+                </div>
+                <figure class="left">
+                    <img src="images/my-plants.jpeg" alt="my plants">
+                    <figcaption>My golden pothos and snake plant - Photo taken by me</figcaption>
+                </figure>
+                
+            </div>
+        </section>
+        <section id="when">
+            <h2>When</h2>
+            <h3>To Watch Out</h3>
+            <div class="cards">
+                <div class="card">
+                    <figure>
+                        <img src="images/sun.jpg" alt="sun">
+                        <figcaption>Orange sun - Drawn by <a href="#who">me</a></figcaption>
+                    </figure>
+                    <h4>Seasonal Care</h4>
+                    <div class="border"></div>
+                    <p>
+                        Plants have different needs depending on the season. During the warmer months, most 
+                        houseplants experience active growth, so they may need more water, light, and 
+                        fertilization. In contrast, during the colder months, growth slows down, and plants 
+                        typically need less frequent watering and care. Make sure to adjust the care routine 
+                        based on the changing seasons—ensure that your plants aren't overwatered during winter 
+                        and are receiving enough light during the shorter days.
+                    </p>
+                </div>
+                <div class="card">
+                    <figure>
+                        <img src="images/bug.jpg" alt="bug">
+                        <figcaption>Mealybug - Drawn by <a href="#who">me</a></figcaption>
+                    </figure>
+                    <h4>Adjusting Care When Getting New Plants</h4>
+                    <div class="border"></div>
+                    <p>
+                        When you bring new plants into your home, it’s important to gradually adjust their care 
+                        based on their specific needs and the environment they’re moving into. Start by checking 
+                        their light, water, and humidity requirements. Some plants may need a period of 
+                        acclimation as they adapt to a new environment. If you’ve just bought a new plant, be sure 
+                        to check for signs of stress like yellowing leaves or drooping, and make gradual adjustments 
+                        rather than making sudden changes to their care.
+                    </p>
+                </div>
+                <div class="card">
+                    <figure>
+                       <img src="images/water.jpg" alt="water">
+                        <figcaption>Water drop - Drawn by <a href="#who">me</a></figcaption>
+                    </figure>
+                    <h4>Signs of Plant Health</h4>
+                    <div class="border"></div>
+                    <p>
+                        It's essential to regularly monitor the health of your plants. Signs of a healthy plant include 
+                        vibrant leaves, steady growth, and strong root systems. If your plant is showing signs of distress, 
+                        such as wilting, yellowing leaves, or browning tips, it may need more or less water, light, or 
+                        nutrients. Pay attention to any changes in your plant's condition, and adjust care as needed to keep 
+                        it healthy and thriving.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section id="where">
+            <div class="container">
+                <div class="left">
+                    <h2>Where to Put Them</h2>
+                    <p>
+                        When deciding where to place your plants, consider their light, temperature, and 
+                        humidity needs. Most plants thrive in bright, indirect light, so place them near 
+                        windows that get filtered sunlight, such as east- or west-facing windows. For plants 
+                        that need direct sunlight, like succulents or citrus trees, a south-facing windowsill 
+                        is ideal. If your plant tolerates low light, like a ZZ plant or Snake plant, corners 
+                        or rooms with less sunlight can work. Keep in mind that tropical plants, such as ferns, 
+                        prefer humid environments and do well in kitchens or bathrooms, while succulents and 
+                        cacti thrive in drier, warmer spaces. Avoid placing plants in areas with extreme 
+                        temperature changes, such as near air conditioning or heating vents. Grouping plants 
+                        with similar needs together can also help create the perfect microenvironment for them 
+                        to flourish.
+                    </p>
+                </div>
+                <figure class="right">
+                    <img src="images/window.jpg" alt="bright sunny window">
+                    <figcaption>Plant in front of window - Drawn by <a href="#who">me</a></figcaption>
+                </figure>
+            </div>
+            <div class="container">
+                <figure class="left">
+                    <img src="images/plant-shop.jpg" alt="plant shop sign">
+                    <figcaption>Plant shop sign - Drawn by <a href="#who">me</a></figcaption>
+                </figure>
+                <div class="right">
+                    <h2>Where to Find Them</h2>
+                    <p>
+                        Finding the right plants for your home can be a fun and rewarding experience. You can start 
+                        by visiting local nurseries and garden centers, where you'll find a variety of healthy indoor 
+                        plants. Many home improvement stores also carry popular houseplants, especially in the spring 
+                        and summer. If you're looking for something more unique, consider checking out specialty 
+                        plant shops, farmers' markets, or even online retailers that offer a wider selection of rare 
+                        and hard-to-find plants. Don’t forget to ask about the plant’s care requirements and history, 
+                        ensuring you choose a plant that fits your home and lifestyle.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section id="how">
+            <div>
+                <div class="left">
+                    <h2>How to Care</h2>
+                    <p>
+                        Creating a care schedule for your plants is essential to keep them healthy and thriving. Start 
+                        by understanding each plant's specific needs, such as watering frequency, light exposure, and 
+                        humidity levels. For most indoor plants, a weekly watering schedule works well, but always check 
+                        the soil moisture before watering to avoid overwatering. Adjust your care routine based on the 
+                        seasons—during the growing season (spring and summer), plants may need more water and nutrients, 
+                        while in the dormant period (fall and winter), they typically require less. Don’t forget to 
+                        regularly check for signs of pests, trim dead leaves, and rotate your plants to ensure even 
+                        growth. Keeping a care journal or setting reminders can help you stay on track and provide your 
+                        plants with the consistent care they need.
+                    </p>
+                    <div>
+                        <h3>My Schedule</h3>
+                        <p>
+                            For my plant care schedule, I water my Pothos whenever it starts to majorly droop, as this is 
+                            a clear sign it’s time for a drink. Since Pothos are quite resilient, they can tolerate a little 
+                            drought between waterings. On the other hand, I water my Snake Plant about once every week and a 
+                            half, as they prefer to dry out between waterings. It's important to always check the soil moisture 
+                            before watering to avoid overwatering, which can cause root rot. Adjusting your watering schedule 
+                            based on how your plants respond is key to ensuring they stay healthy and happy.
+                        </p>
+                    </div>
+                </div>
+                <figure class="right">
+                    <img src="images/how.jpg" alt="green plant being watered by red watering can">
+                    <figcaption>Plant being watered - Drawn by <a href="#who">me</a></figcaption>
+                </figure>
+        </div>
+        </section>
+        <section id="why">
+            <figure class="left">
+                <img src="images/why.jpg" alt="big tree">
+                <figcaption>Big green tree - Drawn by <a href="#who">me</a></figcaption>
+            </figure>
+            <div class="right">
+                <h2>Why Plants Matter</h2>
+                <p>
+                    Plants play a crucial role in enhancing both the environment and our well-being. Not only do they 
+                    purify the air by absorbing toxins and releasing oxygen, but they also help reduce stress and improve 
+                    mental health. Studies have shown that caring for plants can boost mood, increase productivity, and 
+                    create a sense of calm in our living spaces. Additionally, indoor plants can add a touch of nature to 
+                    any room, bringing beauty and a feeling of tranquility. By surrounding ourselves with plants, we foster 
+                    a healthier, more vibrant environment, both physically and emotionally.
+                </p>
+                <p>
+                    Moreover, having plants in our living spaces can enhance productivity and creativity. Research has found 
+                    that individuals surrounded by greenery are more focused, have better cognitive function, and experience 
+                    higher levels of engagement. Whether placed in a home office, bedroom, or living room, indoor plants bring 
+                    a touch of nature indoors, creating a serene and rejuvenating atmosphere. By surrounding ourselves with plants, 
+                    we not only improve the air we breathe but also cultivate a calming, harmonious space that nurtures both our 
+                    physical surroundings and emotional well-being, contributing to a healthier, more vibrant lifestyle.
+                </p>
+            </div>
+        </section>
+        <section id="prompts">
+            <h2>AI Prompts</h2>
+            <p>These are the prompts, in ChatGPT, I used for this project:</p>
+            <ul>
+                <li>I have 2 plants: pothos and snake plant. make an about me section</li>
+                <li>i have a when section, it contains info on seasonal care, adjusting care(getting new plants), and signs of plant health</li>
+                <li>i have a general where to put plants section paragraph</li>
+                <li>where to find plants section paragraph</li>
+                <li>i have a how to care schedule section paragraph</li>
+                <li>for my schedule i water my pothos whenever it starts to majorly droop, I water my snake plant around every week and a half</li>
+                <li>i have a why plants matter section</li>
+                <li>Expand on this paragraph Why Plants Matter:</li>
+            </ul>
+        </section>
+        
+    </main>
+    <footer>
+        <p id="copyright">
+            Designed by 
+            <a href="project/preciouswebstudios.com/">Precious Web Studios</a>
+             © 2025, Certified in 
+            <a href="https://www.freecodecamp.org/certification/padigwe/responsive-web-design">Responsive Web Design</a>
+        </p>
+        <p><a href="https://validator.w3.org/check?uri=referer"></a>HTML Validation<a href="https://jigsaw.w3.org/css-validator/check/referer">CSS Validation</a><a href="https://wave.webaim.org/report#/check?uri=referer"></a>Disability/Accessibility Validation</p>
+    </footer>
+    
+        <script src="../../scripts/include.js"></script>
+    <script src="../../scripts/menu.js"></script>
+    <script src="script/script.js"></script>
+    
+    <!-- <script src="../../scripts/validation-icons.js"></script> -->
+</body>
+</html>
