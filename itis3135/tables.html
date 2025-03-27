@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Precious's Passionate Auk || ITIS 3135 || HTML Tables</title>
+     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Rock+Salt&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="styles/default.css">
+</head>
+    <body class="short">
+       <header>
+            <div data-include="components/header.html"></div>
+       </header>
+       <main>
+            <h2>Activity - HTML Tables - Whimsical Company</h2>
+            <ol class="tables">
+                <li>John Doe johndoe@gmail.com 1</li>
+                <li>Oliver Queen ollyq@aol.com 5</li>
+                <li>Felicity Smoakes smoakesoverwatch@yahoo.com 2</li>
+                <li>John Diggle jdiggs@gmail.com 4</li>
+                <li>Thea Queen queenthea@aol.com 6</li>
+                <li>Barry Allen allenflash@gmail.com 2</li>
+                <li>Curtis Holt curtistech@yahoo.com 1</li>
+                <li>Roy Harper royhar@aol.com 3</li>
+            </ol>
+
+            <h3>Database</h3>
+            <ol class="tables">
+                <li>John Doe</li>
+                <li>Oliver Queen</li>
+                <li>Felicity Smoakes</li>
+                <li>John Diggle</li>
+                <li>Thea Queen</li>
+                <li>Barry Allen</li>
+                <li>Curtis Holt</li>
+                <li>Roy Harper</li>
+            </ol>
+            <h3>Employee Data in Simple Table</h3>
+            <table class="tables data">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Years of Service</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>John Doe</th>
+                        <td>johndoe@gmail.com</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <th>Oliver Queen</th>
+                        <td>ollyq@aol.com</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <th>Felicity Smoakes</th>
+                        <td>smoakesoverwatch@yahoo.com</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <th>John Diggle</th>
+                        <td>jdiggs@gmail.com</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <th>Thea Queen</th>
+                        <td>queenthea@aol.com</td>
+                        <td>6</td>
+                    </tr>
+                    <tr>
+                        <th>Barry Allen</th>
+                        <td>allenflash@gmail.com</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <th>Curtis Holt</th>
+                        <td>curtistech@yahoo.com</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <th>Roy Harper</th>
+                        <td>royhar@aol.com</td>
+                        <td>3</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3>Employee Data in a Better Table</h3>
+            <figure>
+                <table class="tables data better">
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Years of Service</th>
+                            <th>Monthly Salary</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="category-one">
+                            <th>Owner</th>
+                            <td>Thea Queen</td>
+                            <td>queenthea@aol.com</td>
+                            <td>6</td>
+                            <td>$8,670</td>
+                        </tr>
+                        <tr class="category-two">
+                            <th rowspan="3" >Management</th>
+                            <td>Felicity Smoakes</td>
+                            <td>smoakesoverwatch@yahoo.com</td>
+                            <td>2</td>
+                            <td>$7,000</td>
+                        </tr>
+                        <tr>
+                            <td>John Diggle</td>
+                            <td>jdiggs@gmail.com</td>
+                            <td>4</td>
+                            <td>$6,200</td>
+                        </tr>
+                        <tr>
+                            <td>Oliver Queen</td>
+                            <td>ollyq@aol.com</td>
+                            <td>5</td>
+                            <td>$6,000</td>
+                        </tr>
+                        <tr class="category-one">
+                            <th rowspan="4">Employees</th>
+                            <td>John Doe</td>
+                            <td>johndoe@gmail.com</td>
+                            <td>1</td>
+                            <td>$3,000</td>
+                        </tr> 
+                        <tr>
+                            <td>Barry Allen</td>
+                            <td>allenflash@gmail.com</td>
+                            <td>2</td>
+                            <td>$3,500</td>
+                        </tr>
+                        <tr>
+                            <td>Roy Harper</td>
+                            <td>royhar@aol.com</td>
+                            <td>3</td>
+                            <td>$4,300</td>
+                        </tr>
+                        <tr>
+                            <td>Curtis Holt</td>
+                            <td>curtistech@yahoo.com</td>
+                            <td>1</td>
+                            <td>$3,000</td>
+                        </tr>
+                        <tr class="category-two">
+                            <th colspan="3">Total Years of Service: </th>
+                            <td>24</td>
+                            <td>$41,670</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <figcaption>Current Employee database for The Passionate Auk cafe</figcaption>
+            </figure>
+       </main>
+       <footer>
+            <div data-include="components/footer.html"></div>
+       </footer> 
+       <script src="scripts/include.js"></script>
+    </body>
+</html>

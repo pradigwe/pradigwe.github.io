@@ -21,6 +21,7 @@ header, main, footer {
     text-align: center;
     font-family: "Patrick Hand", cursive;
     font-size: 15px;
+    letter-spacing: 2px;
 }
 
 /* Header */
@@ -169,6 +170,53 @@ ul {
     font-size: 20px;
 }
 
+/* Tables Page Specific */
+.tables {
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.better > thead > tr {
+    background-color: #445b2b;
+    color: #ffffff;
+}
+
+.better > tbody > tr:nth-child(odd) {
+    background-color: #c6e89e;
+}
+.better > tbody > tr:nth-child(even) {
+    background-color: #e3f1d4;
+}
+
+.category-one > th{
+    background-color: #768960;
+    color: #ffffff;
+}
+
+.category-two > th {
+    background-color: #a3c779;
+}
+
+
+.data  {
+    border: 1px solid black;
+    display: inline-block;
+    text-align: center;
+}
+
+.data th, .data td {
+    border: 1px solid black;
+    padding: 0 20px;
+}
+
+.total {
+    text-align: end;
+}
+
+
 /* RULE OVERRIDES */
 /* Rule Overrides For Laptops / Small Screens */
 @media screen and ( min-width: 981px ) and ( max-width: 1900px ) {
@@ -188,10 +236,10 @@ ul {
     /* Navigation */
     #navigation {
         display: flex;
+    }
 
-        a {
-            display:block;
-        }
+    #navigation a {
+        display:block;
     }
     
     /* Website Evaluation */
