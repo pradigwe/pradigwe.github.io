@@ -148,7 +148,7 @@ const generateIntro = () => {
         </ul>
         <h4><span class="strong">Courses Currently Taking</span></h4>
         <ul id="class-container" class="indent left"></ul>
-        <ul class="list no-bullet" id="facts-container"></ul>
+        <ul class="list left no-bullet" id="facts-container"></ul>
         <button id="reset-form-btn">Reset Form</button>
     `;
     // Displays forms' courses to page
@@ -160,6 +160,7 @@ const generateIntro = () => {
                 const courseHTML = document.createElement('li');
                 const text = document.createTextNode(course.value);
                 courseHTML.appendChild(text);
+                courseHTML.className = 'strong';
                 classContainer.appendChild(courseHTML);
             }
         }        
