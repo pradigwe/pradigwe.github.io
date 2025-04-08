@@ -25,32 +25,52 @@ header, main, footer {
 }
 
 /* Header */
+#header {
+    background-color: var(--navigation-color);
+    display: flex;
+    border-bottom: 5px solid var(--navigation-color);
+}
+
 h1 {
     font-family: "Rock Salt";
-    background-color: var(--background-color);
+    font-size: 20px;
     padding: 12px;
     margin: 0;
-    color: #BC6C25;
+    color: #ef9f59;
+    flex-grow: 1;
+    align-self: center;
+}
+
+#navigation-menu {
+    width: 60%;
 }
 
 /* Header Navigation */
-#navigation {
-    background-color: var(--navigation-color);
+.navigation {
     padding: 20px;
-    justify-content: center;
+    justify-content: end;
 }
 
-#navigation > a + a {
+.navigation:first-of-type {
+    padding-bottom: 0px;
+}
+
+.navigation > a + a {
     margin-left: 30px;
 }
 
-#navigation > a {
+.navigation > a {
     color: var(--navigation-text-color);
     text-decoration: none;
 }
 
-#navigation .icon {
+.navigation .icon {
     display: none;
+}
+
+.navigation > div {
+    display: flex;
+    flex-direction: column;
 }
 
 /* Footer */
@@ -313,7 +333,7 @@ label[for="image-caption"] {
 /* Rule Overrides For Laptops / Small Screens */
 @media screen and ( min-width: 981px ) and ( max-width: 1900px ) {
     /* Navigation */
-    #navigation {
+    .navigation {
         display: flex;
     }
     
@@ -326,11 +346,15 @@ label[for="image-caption"] {
 /* Rule Overrides For Tablet Devices */
 @media screen and ( min-width: 601px ) and ( max-width: 980px ) {
     /* Navigation */
-    #navigation {
+    h1 {
+        font-size: 16px;
+    }
+    .navigation {
         display: flex;
+        font-size: 12px;
     }
 
-    #navigation a {
+    .navigation a {
         display:block;
     }
     
@@ -339,7 +363,7 @@ label[for="image-caption"] {
         padding-bottom: 30px;
     }
     /* Footer */
-    #navigation > a + a {
+    .navigation > a + a {
         margin-left: 15px;
     }
 }
@@ -358,19 +382,27 @@ label[for="image-caption"] {
     }
 
     /* Navigation */
-    #navigation {
+    #header {
+        flex-direction: column;
+    }
+    #navigation-menu {
+        width: 100vw;
+    }
+
+    .navigation {
+        justify-self: start;
         font-size: 20px;
         align-content: center;
         padding: 5px 20px;
     }
-    #navigation a:not(:first-child){
+    .navigation a:not(:first-child){
         display: none;
         float: none;
         text-align: left;
         margin: 10px;
     }
 
-    #navigation .icon {
+    .navigation .icon {
         display: block;
         float: right;
         color: #ffffff;

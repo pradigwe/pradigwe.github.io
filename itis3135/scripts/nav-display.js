@@ -1,9 +1,6 @@
 function displayNav () {
-    const smallNav = document.querySelectorAll('#navigation a:not(:first-child)');
+    const smallNav = document.querySelectorAll('#navigation-menu .navigation a:not(.icon)');
     smallNav.forEach((e) => {
-    const element = getComputedStyle(e);
-    const display = element.display; 
-
     if (window.innerWidth > 600) {
         e.style.display = 'block';
     } else {

@@ -1,11 +1,8 @@
 const icon = document.querySelector('.icon');
-const smallNav = document.querySelectorAll('#navigation a:not(:first-child)');
+const smallNav = document.querySelectorAll('#navigation-menu .navigation a:not(.icon)');
 icon.addEventListener('click', () => {
     smallNav.forEach((e) => {
-        const element = getComputedStyle(e);
-        const display = element.display;
-        
-        if (display === 'none') {
+        if (e.style.display === 'none') {
             e.style.display  = 'block';
         } else {
             e.style.display  = 'none';
