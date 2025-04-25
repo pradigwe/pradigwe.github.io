@@ -262,3 +262,21 @@ div .panel > section{
 #officer-btn {
     background-color: var(--main-color);
 }
+
+/* Contact Page */
+#contact {
+    height: calc(100% - 5vh - 20px);
+    display: grid;
+    grid-template-columns: 2.5fr 1fr;
+}
+
+#contact > section:nth-child(2){
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+#contact > section > #instagram-btn, #contact > section > #ninerengage-btn {
+    background-color: var(--sub-color);
+}
