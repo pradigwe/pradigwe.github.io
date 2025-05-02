@@ -46,6 +46,11 @@ body {
     font-weight: bold;
 }
 
+.link {
+    color: red;
+    text-decoration: none;
+}
+
 /* Header Styles */
 header {
     /* border: 2px solid black; */
