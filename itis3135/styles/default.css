@@ -356,6 +356,45 @@ label[for="image-caption"] {
     color: #445b2b;
 }
 
+/* Slideshow Page Specific */
+.container {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.slides > img {
+    width: 35%;
+}
+
+#caption-container {
+    justify-self: center;
+    text-align: center;
+    width: 50%;
+}
+
+#btn-container {
+    display: flex;
+    justify-self: center;
+    justify-content: space-between;
+    text-align: center;
+    width: 15%;
+}
+
+#prevBtn, #nextBtn {
+    width: 40%;
+    font-size: 40px;
+    cursor: pointer;
+    user-select: none;
+}
+
+#nextBtn {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+#prevBtn:hover, #nextBtn:hover {
+    background-color: #c6e89e;
+}
 
 /* RULE OVERRIDES */
 /* Rule Overrides For Laptops / Small Screens */
