@@ -40,12 +40,25 @@ body {
     margin: 20px;
 }
 
+
 .page {
     height: calc(100% - 5vh - 20px);
 }
 
+.active-page {
+    background-color: var(--main-color);
+    color: var(--background-color) !important;
+    font-weight: bold;
+    font-style: 'Oswald';
+
+}
+
 .strong {
     font-weight: bold;
+}
+
+.italic {
+    font-style: italic;
 }
 
 .link {
@@ -124,6 +137,7 @@ h4, h5 {
     text-decoration: none;
     color: var(--main-color-2);
     font-size: 20px;
+    padding: 10px 30px;
 }
 
 /* Home Page Styles */
@@ -289,4 +303,39 @@ div .panel > section{
 
 #contact > section > #instagram-btn, #contact > section > #ninerengage-btn {
     background-color: var(--sub-color);
+}
+
+/* Gallery Page Styles */
+#photo-container {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.slides {
+    display: none;
+}
+
+#caption-container {
+    justify-self: center;
+    text-align: center;
+    width: 50%;
+}
+
+#btn-container {
+    display: flex;
+    justify-self: center;
+    justify-content: space-between;
+    text-align: center;
+    width: 15%;
+}
+
+#prevBtn, #nextBtn {
+    width: 40%;
+    font-size: 40px;
+    cursor: pointer;
+    user-select: none;
+}
+#nextBtn {
+    right: 0;
+    border-radius: 3px 0 0 3px;
 }

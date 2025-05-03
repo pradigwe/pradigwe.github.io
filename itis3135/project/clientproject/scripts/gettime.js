@@ -6,7 +6,6 @@ const setTime = () => {
     const month = now.toLocaleString('default', {month: 'long'}).toString();
     const year = now.getFullYear().toString();
     time.innerText = month + ' ' + day + ', ' + year;
-    // console.log(ti);
 };
 
 
