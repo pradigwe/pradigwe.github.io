@@ -1,3 +1,4 @@
+/* Color variables */
 :root {
     --background-color: #efedea;
     --main-color: #851922;
@@ -5,6 +6,7 @@
     --sub-color: #202442;
 }
 
+/* General layout */
 html {
     box-sizing: border-box;
     font-size: 17px;
@@ -61,7 +63,7 @@ header {
     justify-content: space-between;
     text-transform: uppercase;
 }
-
+/* Main title */
 h1 {
     text-transform: uppercase;
     color: var(--main-color-2);
@@ -72,7 +74,7 @@ h1 {
     font-family: 'Oswald', 'Times New Roman', Times, serif;
     margin: auto 0;
 }
-
+/* Timestamp display */
 #time {
     margin: auto 0;
     padding: 20px;
@@ -82,6 +84,7 @@ h1 {
     background-color: var(--main-color);
 }
 
+/* Typography */
 main {
 
     /* border-top: none; */
@@ -228,7 +231,7 @@ div .panel > section{
     margin: 10px 70px;
 }
 
-/* Join Page */
+/* Join Page Styles*/
 #join {
     height: calc(100% - 5vh - 20px);
     display: grid;
@@ -241,6 +244,7 @@ div .panel > section{
     flex-direction: column;
 }
 
+/* Embedded google form styles */
 #officer-form, #volunteer-form {
     width: 100%;
     height: 500px;
@@ -253,6 +257,7 @@ div .panel > section{
     padding-bottom: 30px;
 }
 
+/* Social media button styles */
 #volunteer-btn, #officer-btn {
     background-color: var(--sub-color);
     color: #fefefe;
@@ -268,7 +273,7 @@ div .panel > section{
     background-color: var(--main-color);
 }
 
-/* Contact Page */
+/* Contact Page Styles*/
 #contact {
     height: calc(100% - 5vh - 20px);
     display: grid;
