@@ -62,7 +62,7 @@ body {
 }
 
 .link {
-    color: red;
+    color: #8F0000;
     text-decoration: none;
 }
 
@@ -338,4 +338,28 @@ div .panel > section{
 #nextBtn {
     right: 0;
     border-radius: 3px 0 0 3px;
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    width: 50%;
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+    padding-bottom: 10px;
+}
+
+footer > p > a {
+    color: var(--main-color);
+    text-decoration: none;
+}
+
+.validation-links {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.validation-links > a {
+    color: var(--main-color);
 }
