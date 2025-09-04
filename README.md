@@ -1,2 +1,2 @@
 # pradigwe.github.io
- 
+ This project is a personal webpage created for my ITIS 3135 class. The homepage features links to my LinkedIn, GitHub, FreeCodeCamp, and Codecademy profiles, as well as an external link to the ITIS 3135 course page. The site includes a contract for the class, an introduction about myself with a photo, and all pages are styled using CSS. This project showcases my skills in HTML and CSS, and serves as a foundational representation of my web development abilities
